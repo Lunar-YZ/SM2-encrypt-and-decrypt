@@ -770,6 +770,10 @@ clean_up:
 	{
 		free(M);
 	}
+	if (md_ctx)
+	{
+		EVP_MD_CTX_free(md_ctx);
+	}
 
 	return error_code;
 }
